@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cvkvtb25je5tc"]
+
+[ext_resource type="Script" uid="uid://m4boaauujj68" path="res://Scripts/menu.gd" id="1_1rerr"]
+[ext_resource type="FontFile" uid="uid://cik1r0thy2xmn" path="res://Textures/fonts/BlackOpsOne-Regular.ttf" id="2_xhh6f"]
+
+[node name="menu" type="Node2D" unique_id=1671978305]
+script = ExtResource("1_1rerr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=352242380]
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.22917238, 0.6960224, 0.74793386, 1)
+
+[node name="Button_play" type="Button" parent="." unique_id=1100512950]
+offset_left = 384.0
+offset_top = 64.0
+offset_right = 704.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(0.9409773, 0.66359127, 0.9761775, 1)
+theme_override_fonts/font = ExtResource("2_xhh6f")
+theme_override_font_sizes/font_size = 100
+text = "play"
+flat = true
+
+[node name="Button_quit" type="Button" parent="." unique_id=1982377264]
+offset_left = 384.0
+offset_top = 312.0
+offset_right = 704.0
+offset_bottom = 503.0
+theme_override_colors/font_color = Color(0.9411765, 0.6627451, 0.9764706, 1)
+theme_override_fonts/font = ExtResource("2_xhh6f")
+theme_override_font_sizes/font_size = 100
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="Button_play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="Button_quit" to="." method="_on_button_quit_pressed"]
