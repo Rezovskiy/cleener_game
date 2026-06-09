@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cmvsp0ecu4w1s"]
+
+[ext_resource type="TileSet" uid="uid://brfl8ykipepq" path="res://Textures/Floor/floor.tres" id="1_54xn5"]
+
+[node name="Level_1" type="Node" unique_id=1748181224]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1697068283]
+tile_set = ExtResource("1_54xn5")
+format = 2
