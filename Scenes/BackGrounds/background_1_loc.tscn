@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dhk1yxlnv3yma"]
+
+[ext_resource type="Script" uid="uid://d3ud3ar8nx8r4" path="res://Scenes/BackGrounds/background_1_loc.gd" id="1_oqmb7"]
+[ext_resource type="Texture2D" uid="uid://cq5ct56wxpcew" path="res://Textures/tilemap/background/черный пепельный лес/backgraund мертвый лес (parallax)-4Sheet.png" id="1_xhktd"]
+[ext_resource type="Texture2D" uid="uid://dw4qs1mgfcb53" path="res://Textures/tilemap/background/черный пепельный лес/backgraund мертвый лес (parallax)-3Sheet.png" id="2_oqmb7"]
+[ext_resource type="Texture2D" uid="uid://bsegegpy8bkul" path="res://Textures/tilemap/background/черный пепельный лес/backgraund мертвый лес (parallax)-2Sheet.png" id="3_fg2bi"]
+[ext_resource type="Texture2D" uid="uid://fa88ud5yrwyw" path="res://Textures/tilemap/background/черный пепельный лес/backgraund мертвый лес (parallax)-1Sheet.png" id="4_juril"]
+
+[node name="Background_1_loc" type="ParallaxBackground" unique_id=1200559669]
+script = ExtResource("1_oqmb7")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1388030256]
+position = Vector2(3, 2)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1153, 0)
+
+[node name="BackgroundМертвыйЛес1" type="Sprite2D" parent="ParallaxLayer" unique_id=1332388168]
+position = Vector2(575, 325)
+scale = Vector2(3.6031253, 3.6055562)
+texture = ExtResource("1_xhktd")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="." unique_id=1093108997]
+position = Vector2(3, 2)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1153, 0)
+
+[node name="BackgroundМертвыйЛес2" type="Sprite2D" parent="ParallaxLayer2" unique_id=928576375]
+position = Vector2(574.5, 328)
+scale = Vector2(3.609375, 3.6111114)
+texture = ExtResource("2_oqmb7")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="." unique_id=74376355]
+position = Vector2(3, 2)
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1153, 0)
+
+[node name="BackgroundМертвыйЛес3" type="Sprite2D" parent="ParallaxLayer3" unique_id=824545124]
+position = Vector2(577, 330.00003)
+scale = Vector2(3.596875, 3.6333334)
+texture = ExtResource("3_fg2bi")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="." unique_id=949801371]
+position = Vector2(3, 2)
+motion_mirroring = Vector2(1153, 0)
+
+[node name="BackgroundМертвыйЛес4" type="Sprite2D" parent="ParallaxLayer4" unique_id=244469631]
+position = Vector2(577, 325.49997)
+scale = Vector2(3.60625, 3.6055553)
+texture = ExtResource("4_juril")
