@@ -19,6 +19,7 @@ radius = 11.0
 height = 54.0
 
 [node name="player" type="CharacterBody2D" unique_id=655501575]
+visible = false
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=727059751]
@@ -33,3 +34,11 @@ shape = SubResource("CapsuleShape2D_f60y1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1687037842]
 offset = Vector2(0, -100)
+zoom = Vector2(1.25, 1.25)
+limit_enabled = false
+
+[node name="ReturnCameraTimer" type="Timer" parent="." unique_id=2058391444]
+wait_time = 2.5
+one_shot = true
+
+[connection signal="timeout" from="ReturnCameraTimer" to="." method="_on_return_camera_timer_timeout"]
