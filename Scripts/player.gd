@@ -1,22 +1,25 @@
 extends CharacterBody2D
 @onready var camera_2d = $Camera2D
+@onready var coyot_time_timer = $CoyotTimeTimer
 @onready var return_camera_timer = $ReturnCameraTimer
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
+	if is_on_floor():
+		coyot_time_timer.start()
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and !coyot_time_timer.is_stopped():
 		velocity.y = JUMP_VELOCITY
+		coyot_time_timer.stop()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
-	
 	
 	if direction:
 		
@@ -30,7 +33,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
-
 
 func _on_return_camera_timer_timeout():
 	camera_2d.offset.x = 0
